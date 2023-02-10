@@ -1,0 +1,10 @@
+package:
+  title: Zirconium Stylesheet
+  name: zirconium
+  version: 0.0.1
+  license: MIT
+  homepage: https://github.com/teacherbuknoy/zirconium
+  description: A stylesheet with layouts, utils, and components
+
+groups:
+  space-utils: Spacing Utilities

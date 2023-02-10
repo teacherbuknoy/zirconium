@@ -8,6 +8,18 @@ xs,
 xxs,
 xxxs;
 
+/// Utility classes for margins. Use `.m-[size]`, `.m[direction-abbr]-[size]`, or `.m-[direction]-[size]` to apply margin.
+/// We support `xxxl`, `xxl`, `xl`, `l`, `m`, `s`, `xs`, `xxs`, and `xxxs` for sizes.
+/// @example
+///   <div class="m-xxxl">...</div>
+///   <div class="m-xxxs">...</div>
+///   <div class="m-m">...</div>
+///   <div class="mblk-s">Block margin is small</div>
+///   <div class="mi-s">Inline margin is small</div>
+///   <div class="m-left-l">Left margin is large (same as .ml-l)</div>
+/// @author Francis Rubio
+/// @group space-utils
+/// @since 0.0.1
 .m {
   @each $s in $spaces {
     &-#{$s} {
