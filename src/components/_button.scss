@@ -1,0 +1,62 @@
+.button {
+  background-color       : hsl(var(--bg-3));
+  border                 : none;
+  border-radius          : var(--radius-1);
+  color                  : hsl(var(--fg-2));
+  cursor                 : pointer;
+  display                : inline-flex;
+  font-family            : var(--font-sans);
+  font-size              : var(--type-size);
+  font-variation-settings: 'wght'500;
+  font-weight            : 500;
+  line-height            : 1.2;
+  padding-block          : var(--space-xxs);
+  padding-inline         : var(--space);
+  text-decoration        : none;
+  transition             : transform 150ms, background 200ms, outline-offset 150ms;
+
+  &:hover:where(:not(:disabled)),
+  &:focus:where(:not(:disabled)) {
+    background-color: hsl(var(--bg-4))
+  }
+
+  &:focus-visible {
+    outline : 3px solid hsl(var(--primary-3));
+    z-index : 2;
+    position: relative;
+  }
+
+  &:where(:not(:focus-visible)):not(:disabled):active {
+    transform: scale(0.97);
+  }
+
+  &:where(:not(:active)):not(:disabled):focus-visible {
+    outline-offset: 5px;
+  }
+
+  &:disabled {
+    cursor          : not-allowed;
+    background-image: linear-gradient(hsl(var(--bg-2) / 50%), hsl(var(--bg-2) / 50%));
+  }
+
+  &.raised {
+    box-shadow: 0 0 0 1px #0003,
+      0 0 1px #fff3 inset,
+      0 1px 1px #fff1 inset,
+      0 2px 2px #0000000a,
+      0 4px 4px #0000000a,
+      0 6px 6px #0000000a;
+
+    text-shadow: 0 1px 1px hsl(var(--bg-1) / 50%);
+  }
+}
+
+.button.primary {
+  background-color: hsl(var(--primary-3));
+  background-image: none;
+  color           : hsl(var(--c-primary-1));
+
+  &:disabled {
+    color: hsl(var(--primary-4))
+  }
+}

@@ -10,6 +10,12 @@
   --bg-3: var(--white-3);
   --bg-4: var(--white-4);
   --bg-5: var(--white-5);
+
+  --primary-1: var(--c-primary-1);
+  --primary-2: var(--c-primary-2);
+  --primary-3: var(--c-primary-3);
+  --primary-4: var(--c-primary-4);
+  --primary-5: var(--c-primary-5);
 }
 
 @mixin dark-scheme() {
@@ -24,6 +30,12 @@
   --bg-3: var(--black-3);
   --bg-4: var(--black-2);
   --bg-5: var(--black-1);
+
+  --primary-1: var(--c-primary-5);
+  --primary-2: var(--c-primary-4);
+  --primary-3: var(--c-primary-3);
+  --primary-4: var(--c-primary-2);
+  --primary-5: var(--c-primary-1);
 }
 
 .theme-default,

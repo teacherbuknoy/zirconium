@@ -13,26 +13,32 @@ class SassCompiler {
     const outputPath = this.config.output.path
     this.paths = {
       sourcemap: [outputPath, 'zirconium.min.css.map'].join('/'),
-      css: [outputPath, 'zirconium.min.css'].join('/')
+      minifiedCss: [outputPath, 'zirconium.min.css'].join('/'),
+      expandedCss: [outputPath, 'zirconium.css'].join('/')
     }
   }
 
   compile(filepath) {
-    const compiled = sass.compile(path.resolve(process.cwd(), filepath), {
+    this.#compileMinified(filepath)
+    this.#compileExpanded(filepath)
+  }
+
+  #compileMinified(filepath) {
+    const minified = sass.compile(path.resolve(process.cwd(), filepath), {
       style: "compressed",
       sourceMap: true,
       alertColor: true
     })
 
-    const { css, sourceMap } = compiled
+    const { css, sourceMap } = minified
     const cssString = `${css}/*# sourceMappingURL=${this.paths.sourcemap} */`
 
     // Write CSS to file
-    fs.writeFile(this.paths.css, cssString, (err) => {
+    fs.writeFile(this.paths.minifiedCss, cssString, (err) => {
       if (err) {
         console.error("[ERROR] Error writing CSS file", err)
       } else {
-        console.log("[SUCCESS] CSS file written to " + this.paths.css)
+        console.log("[SUCCESS] CSS file written to " + this.paths.minifiedCss)
       }
     })
 
@@ -42,6 +48,26 @@ class SassCompiler {
         console.error("[ERROR] Error writing sourcemap file", err)
       } else {
         console.log("[SUCCESS] Sourcemap file written to " + this.paths.sourcemap)
+      }
+    })
+  }
+
+  #compileExpanded(filepath) {
+    const minified = sass.compile(path.resolve(process.cwd(), filepath), {
+      style: "expanded",
+      sourceMap: true,
+      alertColor: true
+    })
+
+    const { css, sourceMap } = minified
+    const cssString = `${css}/*# sourceMappingURL=${this.paths.sourcemap} */`
+
+    // Write CSS to file
+    fs.writeFile(this.paths.expandedCss, cssString, (err) => {
+      if (err) {
+        console.error("[ERROR] Error writing CSS file", err)
+      } else {
+        console.log("[SUCCESS] CSS file written to " + this.paths.expandedCss)
       }
     })
   }
