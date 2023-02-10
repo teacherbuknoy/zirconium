@@ -1,0 +1,42 @@
+@mixin light-scheme() {
+  --fg-1: var(--black-5);
+  --fg-2: var(--black-4);
+  --fg-3: var(--black-3);
+  --fg-4: var(--black-2);
+  --fg-5: var(--black-1);
+
+  --bg-1: var(--white-1);
+  --bg-2: var(--white-2);
+  --bg-3: var(--white-3);
+  --bg-4: var(--white-4);
+  --bg-5: var(--white-5);
+}
+
+@mixin dark-scheme() {
+  --fg-1: var(--white-1);
+  --fg-2: var(--white-2);
+  --fg-3: var(--white-3);
+  --fg-4: var(--white-4);
+  --fg-5: var(--white-5);
+
+  --bg-1: var(--black-5);
+  --bg-2: var(--black-4);
+  --bg-3: var(--black-3);
+  --bg-4: var(--black-2);
+  --bg-5: var(--black-1);
+}
+
+.theme-default,
+.theme-light {
+  @include light-scheme();
+}
+
+.theme-dark {
+  @include dark-scheme();
+}
+
+.theme-default {
+  @media (prefers-color-scheme: dark) {
+    @include dark-scheme();
+  }
+}

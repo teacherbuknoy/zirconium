@@ -1,5 +1,12 @@
 @import "base/reset";
 @import "base/config";
+@import "base/theme";
+
+@import "components/button";
 
 @import "utils/space";
 @import "utils/text";
+
+body {
+  background-color: hsl(var(--bg-2));
+}
