@@ -44,4 +44,114 @@ xxxs;
       }
     }
   }
+
+  &-top,
+  &t {
+    @each $s in $spaces {
+      &-#{$s} {
+        margin-top: var(--space-#{$s});
+      }
+    }
+  }
+
+  &-bottom,
+  &b {
+    @each $s in $spaces {
+      &-#{$s} {
+        margin-bottom: var(--space-#{$s});
+      }
+    }
+  }
+
+  &-left,
+  &l {
+    @each $s in $spaces {
+      &-#{$s} {
+        margin-left: var(--space-#{$s});
+      }
+    }
+  }
+
+  &-right,
+  &r {
+    @each $s in $spaces {
+      &-#{$s} {
+        margin-right: var(--space-#{$s});
+      }
+    }
+  }
+}
+
+/// Utility classes for paddings. Use `.p-[size]`, `.p[direction-abbr]-[size]`, or `.p-[direction]-[size]` to apply margin.
+/// We support `xxxl`, `xxl`, `xl`, `l`, `m`, `s`, `xs`, `xxs`, and `xxxs` for sizes.
+/// @example
+///   <div class="p-xxxl">...</div>
+///   <div class="p-xxxs">...</div>
+///   <div class="p-m">...</div>
+///   <div class="pblk-s">Block padding is small</div>
+///   <div class="pi-s">Inline padding is small</div>
+///   <div class="p-left-l">Left padding is large (same as .pl-l)</div>
+/// @author Francis Rubio
+/// @group space-utils
+/// @since 0.0.1
+.p {
+  @each $s in $spaces {
+    &-#{$s} {
+      padding: var(--space-#{$s});
+    }
+  }
+
+  &-inline,
+  &i {
+    @each $s in $spaces {
+      &-#{$s} {
+        padding-inline: var(--space-#{$s});
+      }
+    }
+  }
+
+  &-block,
+  &blk {
+    @each $s in $spaces {
+      &-#{$s} {
+        padding-block: var(--space-#{$s});
+      }
+    }
+  }
+
+  &-top,
+  &t {
+    @each $s in $spaces {
+      &-#{$s} {
+        padding-top: var(--space-#{$s});
+      }
+    }
+  }
+
+  &-bottom,
+  &b {
+    @each $s in $spaces {
+      &-#{$s} {
+        padding-bottom: var(--space-#{$s});
+      }
+    }
+  }
+
+  &-left,
+  &l {
+    @each $s in $spaces {
+      &-#{$s} {
+        padding-left: var(--space-#{$s});
+      }
+    }
+  }
+
+  &-right,
+  &r {
+    @each $s in $spaces {
+      &-#{$s} {
+        padding-right: var(--space-#{$s});
+      }
+    }
+  }
 }
