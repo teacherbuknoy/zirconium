@@ -1,0 +1,7 @@
+.type-size {
+  @for $level from 1 through 9 {
+    &--#{$level} {
+      font-size: var(--type-size-#{$level});
+    }
+  }
+}

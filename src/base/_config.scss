@@ -1,0 +1,148 @@
+:root {
+  --font-code     : var(--font-monospace);
+  --font-monospace: "Source Code Pro", monospace;
+  --font-sans     : "Figtree", sans-serif;
+  --font-serif    : "Fraunces", serif;
+}
+
+:root {
+  --type-size-1: clamp(1.48rem, calc(-1.08rem + 12.76vw), 14.24rem);
+  --type-size-2: clamp(1.38rem, calc(-0.24rem + 8.11vw), 9.49rem);
+  --type-size-3: clamp(1.30rem, calc(0.29rem + 5.03vw), 6.33rem);
+  --type-size-4: clamp(1.22rem, calc(0.61rem + 3.00vw), 4.22rem);
+  --type-size-5: clamp(1.14rem, calc(0.80rem + 1.67vw), 2.81rem);
+  --type-size-6: clamp(1.07rem, calc(0.91rem + 0.81vw), 1.88rem);
+  --type-size-7: clamp(0.83rem, calc(0.96rem + -0.10vw), 0.94rem);
+  --type-size-8: clamp(0.56rem, calc(0.94rem + -0.32vw), 0.88rem);
+  --type-size-9: clamp(0.37rem, calc(0.91rem + -0.45vw), 0.82rem);
+  --type-size  : clamp(1.00rem, calc(0.95rem + 0.25vw), 1.25rem);
+
+  // variable type sizes use em instead of rem
+  --vtype-size-1: clamp(1.48em, calc(-1.08em + 12.76vw), 14.24em);
+  --vtype-size-2: clamp(1.38em, calc(-0.24em + 8.11vw), 9.49em);
+  --vtype-size-3: clamp(1.30em, calc(0.29em + 5.03vw), 6.33em);
+  --vtype-size-4: clamp(1.22em, calc(0.61em + 3.00vw), 4.22em);
+  --vtype-size-5: clamp(1.14em, calc(0.80em + 1.67vw), 2.81em);
+  --vtype-size-6: clamp(1.07em, calc(0.91em + 0.81vw), 1.88em);
+  --vtype-size-7: clamp(0.83em, calc(0.96em + -0.10vw), 0.94em);
+  --vtype-size-8: clamp(0.56em, calc(0.94em + -0.32vw), 0.88em);
+  --vtype-size-9: clamp(0.37em, calc(0.91em + -0.45vw), 0.82em);
+  --vtype-size  : clamp(1.00em, calc(0.95em + 0.25vw), 1.25em);
+
+  --content-width: 75ch;
+  --page-width   : 130ch;
+}
+
+:root {
+  --d-contrast     : 0 0% 10%;
+  --d-default      : 0 0% 30%;
+  --d-subtle       : 0 0% 60%;
+  --d-non-essential: 0 0% 70%;
+
+  --l-contrast     : 0 0% 100%;
+  --l-default      : 0 0% 90%;
+  --l-subtle       : 0 0% 70%;
+  --l-non-essential: 0 0% 50%;
+}
+
+:root {
+  --l-primary-100: 344 100% 94.9%;
+  --l-primary-300: 344 100% 78.4%;
+  --l-primary-500: 338 90.2% 60%;
+  --l-primary-700: 336 100% 30%;
+  --l-primary-900: 336 100% 23.9%;
+
+  --d-primary-900: 344 100% 94.9%;
+  --d-primary-700: 344 100% 78.4%;
+  --d-primary-500: 338 90.2% 60%;
+  --d-primary-300: 336 100% 30%;
+  --d-primary-100: 336 100% 23.9%;
+
+  --l-secondary-100: 38 90% 94%;
+  --l-secondary-300: 38 90% 84%;
+  --l-secondary-500: 38 90% 54%;
+  --l-secondary-700: 38 90% 44%;
+  --l-secondary-900: 38 90% 24%;
+
+  --d-secondary-900: 38 70% 94%;
+  --d-secondary-700: 38 90% 84%;
+  --d-secondary-500: 38 90% 54%;
+  --d-secondary-300: 38 90% 34%;
+  --d-secondary-100: 38 50% 24%;
+
+  --l-error-100: 5 100% 75%;
+  --l-error-300: 0 81% 63%;
+  --l-error-500: 357 68% 46%;
+  --l-error-700: 1 94% 33%;
+  --l-error-900: 0 100% 24%;
+
+  --l-success-100: 82 100% 75%;
+  --l-success-300: 87 66% 58%;
+  --l-success-500: 92 68% 43%;
+  --l-success-700: 97 95% 29%;
+  --l-success-900: 102 100% 21%;
+
+  --l-warning-100: 32 100% 75%;
+  --l-warning-300: 27 100% 66%;
+  --l-warning-500: 22 89% 56%;
+  --l-warning-700: 17 98% 40%;
+  --l-warning-900: 22 40% 17%;
+
+  --l-info-100: 233 100% 98%;
+  --l-info-300: 216 100% 84%;
+  --l-info-500: 211 100% 55%;
+  --l-info-700: 216 85% 24%;
+  --l-info-900: 230 95% 7%;
+
+  --d-info-900: 233 100% 98%;
+  --d-info-700: 216 100% 84%;
+  --d-info-500: 211 100% 55%;
+  --d-info-300: 216 85% 24%;
+  --d-info-100: 230 95% 7%;
+
+  --d-error-900: 5 100% 75%;
+  --d-error-700: 0 81% 63%;
+  --d-error-500: 357 68% 46%;
+  --d-error-300: 1 94% 33%;
+  --d-error-100: 0 100% 24%;
+
+  --d-success-900: 82 100% 75%;
+  --d-success-700: 87 66% 58%;
+  --d-success-500: 92 68% 43%;
+  --d-success-300: 97 95% 29%;
+  --d-success-100: 102 100% 21%;
+
+  --d-warning-900: 32 100% 75%;
+  --d-warning-700: 27 100% 66%;
+  --d-warning-500: 22 89% 56%;
+  --d-warning-300: 17 98% 40%;
+  --d-warning-100: 22 40% 17%;
+}
+
+:root {
+  --radius-1: 4px;
+  --radius-2: 6px;
+  --radius-3: 8px;
+  --radius-4: 10px;
+  --radius-5: 12px;
+}
+
+:root {
+  --space-none: 0;
+  --space-auto: auto;
+  --space-xxxl: 4rem;
+  --space-xxl : 3rem;
+  --space-xl  : 2rem;
+  --space-l   : 1.5rem;
+  --space     : 1rem;
+  --space-m   : var(--space);
+  --space-s   : 0.75rem;
+  --space-xs  : 0.5rem;
+  --space-xxs : 0.25rem;
+  --space-xxxs: 0.1rem;
+}
+
+:root {
+  --focus-ring-size : 3px;
+  --focus-ring-color: var(--primary-700);
+}

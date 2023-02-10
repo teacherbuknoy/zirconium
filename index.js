@@ -19,8 +19,6 @@ const cssOut = [outputPath, 'zirconium.min.css'].join('/');
 const { css, sourceMap } = compiled
 const cssString = `${css}/*# sourceMappingURL=${mapOut} */`
 
-console.log(cssString)
-
 // Write CSS to file
 fs.writeFile(cssOut, cssString, (err) => {
   if (err) {

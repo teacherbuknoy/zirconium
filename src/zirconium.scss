@@ -1,11 +1,4 @@
-:root {
-  scroll-padding: 20vh;
+@import "base/reset";
+@import "base/config";
 
-  @media (prefers-reduced-motion: no-preference) {
-    scroll-behavior: smooth;
-  }
-
-  &.no-scroll {
-    overflow: hidden;
-  }
-}
+@import "utils/text";
