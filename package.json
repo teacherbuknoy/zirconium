@@ -1,0 +1,29 @@
+{
+  "name": "zirconium",
+  "version": "1.0.0",
+  "description": "Stylesheet with layouts, utilities, and components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teacherbuknoy/zirconium.git"
+  },
+  "keywords": [
+    "sass",
+    "css",
+    "styling"
+  ],
+  "author": "Francis Rubio <devfrancisrubio@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/teacherbuknoy/zirconium/issues"
+  },
+  "homepage": "https://github.com/teacherbuknoy/zirconium#readme",
+  "dependencies": {
+    "sass": "^1.58.0",
+    "yaml": "^2.2.1"
+  }
+}
