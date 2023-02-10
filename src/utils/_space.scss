@@ -1,0 +1,35 @@
+$spaces: xxxl,
+xxl,
+xl,
+l,
+m,
+s,
+xs,
+xxs,
+xxxs;
+
+.m {
+  @each $s in $spaces {
+    &-#{$s} {
+      margin: var(--space-#{$s});
+    }
+  }
+
+  &-inline,
+  &i {
+    @each $s in $spaces {
+      &-#{$s} {
+        margin-inline: var(--space-#{$s});
+      }
+    }
+  }
+
+  &-block,
+  &blk {
+    @each $s in $spaces {
+      &-#{$s} {
+        margin-block: var(--space-#{$s});
+      }
+    }
+  }
+}
